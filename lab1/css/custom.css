@@ -1,0 +1,779 @@
+/* CSS Rules for Lab 1 using Bootstrap.  Note, these rules are laid out mobile first.  
+	That is, the smaller screen rules are shown first
+
+    Note, that CSS rule will propoagte up to larger devices, unless you modify them with a 
+    media query and change the rule
+*/
+
+/* Method to declare your own fonts */
+@font-face {
+	font-family: cocaColaFont;
+	src: url(../fonts/lokicola.ttf);
+}
+
+/* Extra small devices (portrait phones, less than 576px)
+   No media query since this is the default in Bootstrap
+*/
+body {
+    padding-bottom: 5px;
+    background-color: #eff1f2;
+}
+
+.main_contents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Some simple CSS rules for styling p, h1 to h6, etc. in the main contents container
+*/
+
+p {
+	font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif; 
+	/* font-family: cocaColaFont; */
+}
+
+#main_3d_image {
+    background-image: url(../assets/images/homepage-topic-desktop-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 201px;
+    margin-bottom: 10px;
+}
+
+#main_text {
+    float: left;
+    margin: 5%;
+    width: 50%;
+    display: block;
+    background-color: rgba(255,255,255,0.6);
+    padding: 10px;
+    border-radius: 5px;
+}
+#main_text h2 {
+    color: rgba(0,102,153,1);
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+#main_text h3 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#main_text p {
+    font-size: 12px;
+    margin: 0px;
+    line-height: 1.2;
+} 
+
+.card {
+    border: 0px solid rgba(0,0,0,.125);
+    border-radius: 1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.logo {
+    margin-top: 3px;
+}
+
+.logo h1 {
+    font-family: cocaColaFont; /* You don't need to repeat this for each media query as it is propagated */
+    font-size: 29px;
+    margin: 0;
+    margin-top: -10px;
+    margin-bottom: -15px;
+    float: left;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 2px;
+    }
+
+.logo h2 {
+    font-family: cocaColaFont;
+    font-size: 31px;
+    margin-top: -6px;
+    margin-bottom: -15px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 3px;
+    float: left;
+    }
+
+.logo h3 {
+    font-size: 18px;
+    margin-top: 0px;
+    margin-bottom: -5px;
+    padding-top: 0px;
+    padding-left: 0px;
+    float: left;
+    }
+
+.logo p {
+    font-size: 7px;
+    margin-top: 23px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-left: 3px;
+}
+
+/* CSS rule to overwrite the navbar-default background and border color — again, helps to stop your site looking like a Bootstrap clone! 
+*/
+
+.navbar_coca_cola {
+    background-color: #fff; /* Set navbar background color */
+    /* border-color: yellow; Sets the navbar border color */
+    /* border-style: solid; */
+    border-width: 0px;
+    min-height: 70px;
+}
+
+/* CSS rule to overwrite the navbar-brand font color
+*/
+.navbar_coca_cola .navbar-brand {
+    color: #262762;
+ }
+    
+/* CSS rule to overwrite the navbar-brand font hover color
+*/
+.navbar_coca_cola .navbar-brand:hover {
+    color: #61090e;
+}
+
+/* NAVIGATION MENU
+*/
+
+/* CSS rules to overwrite the position of the Bootstrap menu
+Bootstrapbay Bootstrap Tutorial Part 11 — CSS Modifications to Navbar and Buttons shows how to do this using Bootstrap 3, the principle should be the same: https://www.youtube.com/watch?v=7v2yC3GyDHU  
+
+There is plenty more styling to do than indicated here, in mobile it still defaults to Bootstrap CSS on dropdown!
+*/
+
+.navbar_coca_cola .navbar-nav > li > a {
+    color: #212556;  
+}
+
+/* CSS rule to overwrite the bootstrap.css text hover color on the navbar
+*/
+.navbar_coca_cola .navbar-nav > li > a:hover, 
+.navbar_coca_cola .navbar-nav > li > a:focus {
+    color: #61090e;  
+}
+
+.navbar_coca_cola .navbar-nav .nav-item {
+    margin-top: 0px;
+}
+
+/* CSS rule to overwrite the bootstrap.css rules for setting the active font color and background colour
+*/
+.navbar_coca_cola .navbar-nav .nav-item > .active, 
+.navbar_coca_cola .navbar-nav > .active > a:hover, 
+.navbar_coca_cola .navbar-nav > .active > a:focus {
+    color:  #61090e; /* Font color for active font */ 
+}
+
+/* A set of CSS rules to change the Bootstrap defaults for the menu link text color, hover, background, focus
+*/
+    
+/* CSS rule to overwrite the bootstrap.css text hover color on the navbar
+*/
+.navbar_coca_cola .navbar-nav > li > a:hover, 
+.navbar_coca_cola  .navbar-nav > li > a:focus {
+    color: #61090e;  
+}
+
+/* These next two CSS rules control the style of the icon bar */
+.navbar_coca_cola .navbar-toggler {
+    border-color: black;
+}
+
+.navbar_coca_cola  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(33, 37, 86)' stroke-width='4' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.navbar_coca_cola .navbar-toggler {
+    outline: none !important;
+}
+
+/* Let's style the dropdown menu
+*/
+
+.dropdown-menu {
+    text-align: -webkit-left;
+    background-color: #eb9a91;
+    margin-top: 20px; /* Experiment to move the dropdown menu down */
+}
+
+.dropdown-menu
+.dropdown-item {
+    color: #f1ee08;
+}
+
+.dropdown-menu
+.dropdown-item:hover {
+    color: #030303;
+    background-color: #e98074;
+}
+
+/* CSS rule to style the footer */
+.footer {
+    color: #FFF;
+    background-color: #262962;
+    height: 240px;
+}
+
+.navbar-text > a {
+    color: rgb(255, 255, 255);
+    font-size: 8px;
+    text-decoration: none;
+}
+
+.navbar-text > p {
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.copyright {
+    padding-top: 13px;
+}
+
+.social {
+}
+
+@media (min-width: 576px) {
+
+    body {
+        background-color: #eff1f2;
+    }
+
+    #main_3d_image {
+        background-image: url(../assets/images/homepage-topic-desktop-1.png);
+        background-repeat: no-repeat;
+        height: 288px;
+    }
+
+    #main_text {
+        float: left;
+        margin-top: 7%;
+    }
+
+    .card {
+        border: 0px solid rgba(0,0,0,.125);
+        border-radius: 1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+    .navbar_coca_cola {
+        background-color: #fff; 
+        min-height: 90px;
+    }
+
+    /* CSS rule to style the footer */
+    .footer {
+        background-color: #262962;
+        height: 100px;
+    }
+
+    .navbar-text > a {
+        font-size: 10px;
+    }
+
+    .navbar-text > p {
+        color: #fff;
+        font-size: 18px;
+    }
+
+    .copyright {
+        padding-top: 20px;
+    }
+
+    .social {
+        padding-top: 7px;
+    }
+
+    .main-menu ul li.has-dropdown > a {
+        position: relative;
+        left: 0px;
+        top: 0px;
+      }
+
+}
+
+
+/* Medium devices (tablets, 768px and up)
+*/
+@media (min-width: 768px) { 
+    
+    body {
+        background-color: #eff1f2;
+    }
+
+    #main_3d_image {
+        background-image: url(../assets/images/homepage-topic-desktop-1.png);
+        background-repeat: no-repeat;
+        height: 363px;
+    }
+
+    .card {
+        border: 0px solid rgba(0,0,0,.125);
+        border-radius: 1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+    #main_text {
+        float: right;
+        margin-top: 7%;
+    }
+
+    #main_text h2 {
+        color: crimson;
+        font-size: 30px;
+    }
+    
+    #main_text h3 {
+        color: darkcyan;
+        font-size:22px;
+    }
+    
+    #main_text p {
+        font-size: 15px;
+    }
+    
+    /* ++++++++++++++++++++++++++LOGO+++++++++++++++++++++++*/
+    
+    /* CSS rule to style the mobile logo */
+
+    .logo {
+        margin-top: 3px;
+    }
+
+    .logo h1 {
+        font-family: cocaColaFont; /* You don't need to repeat this for each media query as it is propogated */
+        font-size: 41px;
+        margin: 0;
+        margin-top: 0px;
+        margin-bottom: -15px;
+        float: left;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 2px;
+    }
+
+    .logo h2 {
+        font-family: cocaColaFont;
+        font-size: 43px;
+        margin-top: 5px;
+        margin-bottom: -15px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 3px;
+        float: left;
+    }
+
+    .logo h3 {
+        font-size: 31px;
+        margin-top: 5px;
+        margin-bottom: 3px;
+        padding-top: 0px;
+        padding-left: 0px;
+        float: left;
+    }
+
+    .logo p {
+        font-size: 10px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-left: 8px;
+    }
+
+    .navbar_coca_cola {
+        background-color:#fff; 
+        min-height: 90px;
+    }
+
+    /* CSS rule to style the footer */
+    .footer {
+        background-color: #262962;
+        height: 120px;
+    }
+
+    .navbar-text > a {
+        font-size: 10px;
+    }
+
+    .navbar-text > p {
+        color:#fff;
+        font-size: 18px;
+    }
+
+    .copyright {
+        padding-top: 20px;
+    }
+
+    .social {
+        padding-top: 7px;
+    }
+    .main-menu ul li.has-dropdown > a {
+        position: relative;
+        left: 10px;
+        top: 8px;
+      }
+}
+
+/* Large devices (desktops, 992px and up)
+*/
+@media (min-width: 992px) { 
+    
+    body {
+        background-color: #eff1f2;
+    }
+
+    #main_3d_image {
+        background-image: url(../assets/images/homepage-topic-desktop-1.png);
+        background-repeat: no-repeat;
+        height: 100%;
+    }
+
+    #main_text {
+        float: left;
+        margin-top: 20%;
+    }
+
+    #main_text h2 {
+        color: crimson;
+        font-size: 30px;
+    }
+    
+    #main_text h3 {
+        color: darkcyan;
+        font-size:22px;
+    }
+    
+    #main_text p {
+        font-size: 15px;
+    }
+
+    .card {
+        border: 0px solid rgba(0,0,0,.125);
+        border-radius: 1rem;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: #fff;
+    }
+
+    .logo {
+        margin-top: 7px;
+    }
+
+    .logo h1 {
+        font-family: cocaColaFont;
+        font-size: 59px;
+        margin: 0;
+        margin-top: 0px;
+        margin-bottom: -20px;
+        float: left;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+
+    .logo h2 {
+        font-family: cocaColaFont;
+        font-size: 65px;
+        margin-top: 7px;
+        margin-bottom: -25px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 6px;
+        float: left;
+    }
+
+    .logo h3 {
+        font-size: 40px;
+        margin-top: 15px;
+        margin-bottom: -5px;
+        padding-top: 0px;
+        padding-left: 0px;
+        float: left;
+    }
+
+    .logo p {
+        font-size: 14px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 65px;
+        padding-left: 12px;
+    }
+
+    .navbar_coca_cola {
+        background-color: #fff; 
+        min-height: 120px;
+    }
+
+    /* CSS rule to style the footer */
+    .footer {
+        background-color: #262962;
+        height: 188px;
+    }
+
+    .navbar-text > a {
+        font-size: 15px;
+    }
+
+    .navbar-text > p {
+        color: #fff;
+        font-size: 23px;
+    }
+
+    .copyright {
+        padding-top: 20px;
+    }
+
+    .social {
+        padding-top: 7px;
+    }
+    .main-menu ul li.has-dropdown > a {
+        position: relative;
+        left: 10px;
+        top: 8px;
+      }
+}
+
+/* Extra large devices (large desktops, 1200px and up)
+*/
+@media (min-width: 1200px) {  
+    .main-menu ul li.has-dropdown > a {
+        position: relative;
+        left: 10px;
+        top: 8px;
+      } 
+
+}
+
+.main-menu ul li:hover.has-dropdown a::after {
+    color: var(--tp-heading-secondary);
+  }
+  /* .main-menu ul li.has-dropdown > a {
+    position: relative;
+    left: 10px;
+    top: 8px;
+  } */
+  .main-menu ul li.has-dropdown > a::after {
+    content: "\e94f";
+    font-size: 14px;
+    color: var(--tp-common-black);
+    font-family: "icon-dukamarket";
+    font-weight: 400;
+    margin-left: 6px;
+    display: inline-block;
+    font-weight: var(--tp-fw-bold);
+  }
+  .main-menu ul li.has-homemenu {
+    position: static;
+  }
+
+  .main-menu ul li:hover .sub-menu {
+    visibility: visible;
+    opacity: 1;
+    top: 100%;
+  }
+
+  .main-menu ul li .sub-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 270px;
+    padding: 30px 0;
+    background-color: #fff;
+    z-index: 2;
+    transition: opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      visibility 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+      transform 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    box-shadow: 0px 8px 20px rgba(61, 110, 168, 0.1);
+    border-radius: 0px 0px 10px 10px;
+    border-top: 2px solid #212556;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  .main-menu ul li .sub-menu > li {
+    margin: 0;
+    list-style: none;
+    padding: 0 20px 0 40px;
+    display: block;
+  }
+  .main-menu ul li .sub-menu > li > a {
+    display: block;
+    font-family: var(--font-body);
+    text-transform: none;
+    padding: 10px 0;
+    padding-left: 0px;
+    color: #334763;
+    font-size: var(--menu-font-size);
+    font-weight: normal;
+    white-space: normal;
+    word-wrap: break-word;
+    word-break: normal;
+    transition: 0.3s;
+    line-height: 131%;
+    text-align: left;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  .main-menu ul li .sub-menu > li > a:hover {
+    color: var(--tp-heading-secondary);
+    padding-left: 8px;
+  }
+  .main-menu ul li .sub-menu > li > a::before {
+    display: none;
+  }
+  .main-menu ul li .sub-menu > li > a::after {
+    display: none;
+  }
+  .sub-menu.mega-menu {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+
+  .mean-container .mean-nav ul .home-menu-style li a {
+    text-align: center;
+  }
+
+  .main-menu ul li .home-menu-style {
+    width: 100%;
+    text-align: center;
+  }
+  .main-menu ul li .home-menu-style li {
+    display: inline-block;
+    padding: 0 10px;
+    width: 230px;
+  }
+  @media only screen and (min-width: 1400px) and (max-width: 1600px) {
+    .main-menu ul li .home-menu-style li {
+      width: 220px;
+    }
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    .main-menu ul li .home-menu-style li {
+      width: 175px;
+    }
+  }
+  .main-menu ul li .home-menu-style li a {
+    text-align: center;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+  }
+  .main-menu ul li .home-menu-style li a:hover {
+    padding-left: 0px;
+    transform: scale(0.92);
+  }
+  .main-menu ul li .home-menu-style li a img {
+    border: 1px solid rgba(222, 226, 230, 0.5607843137);
+    border-radius: 10px;
+    width: 100%;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+  .tpblog__item:hover .tpblog__thumb img {
+    transform: scale(1.05);
+  }
+  .tpblog__thumb {
+    border-radius: 10px 10px 0 0;
+  }
+  .tpblog__thumb img {
+    width: 100%;
+    -webkit-transition: all 1s ease-out 0s;
+    -moz-transition: all 1s ease-out 0s;
+    -ms-transition: all 1s ease-out 0s;
+    -o-transition: all 1s ease-out 0s;
+    transition: all 1s ease-out 0s;
+  }
+
+  .fix {
+    overflow: hidden;
+  }
+
+  .tpblog__details {
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #0075fc;
+  }
+  .tpblog__details a {
+    display: flex;
+    align-items: center;
+  }
+  .tpblog__details a:hover i {
+    opacity: 1;
+    visibility: visible;
+    animation: shakenext 1s ease infinite;
+  }
+  .tpblog__details a i {
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 3px;
+    opacity: 0;
+    /* visibility: hidden; */
+  }
+
+  .tpfooter__widget-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgb(188, 182, 182)
+}
+  .tpfooter__copyright-text {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    color: grey;
+}
+
+.tpfooter__name {
+    font-size: 14px;
+    color: rgb(188, 182, 182);
+}
+
+.tpfooter__widget-social a {
+    color: #fff;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+  .tpfooter__widget-social a:hover {
+    color: #b40713;
+  }
+  .tpfooter__widget-social-title {
+    color: #fff;
+    display: block;
+  }
+  .tpfooter__widget-social img {
+    width: 100%;
+  }
+  .tpfooter__widget-time-info span {
+    font-size: 16px;
+    color: grey;
+    display: block;
+  }
+
